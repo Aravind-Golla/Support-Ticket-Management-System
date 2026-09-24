@@ -1,0 +1,10 @@
+{
+  "name": "support-ticket-system",
+  "private": true,
+  "description": "Support Ticket Management System",
+  "scripts": {
+    "dev": "npm run dev --prefix backend",
+    "start": "npm start --prefix backend",
+    "test": "npm test --prefix backend"
+  }
+}
