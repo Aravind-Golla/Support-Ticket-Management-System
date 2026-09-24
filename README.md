@@ -62,7 +62,7 @@ Windows example (service `MySQL80` already installed):
 
 ```bash
 "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -u root -p
-```
+
 
 Optional Docker MySQL:
 
@@ -206,7 +206,7 @@ Saved in `database/queries.sql` and exposed to agents at `GET /api/tickets/repor
 - Password hashes never returned by the API
 - Input validation on auth, tickets, and comments
 - CORS restricted to `CORS_ORIGIN`
-- Distinct 401 / 403 handling
+- Distinct 401
 
 ## Deployment instructions
 
