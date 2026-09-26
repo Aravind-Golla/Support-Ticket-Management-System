@@ -6,6 +6,6 @@
     "dev": "npm run dev --prefix backend",
     "start": "npm start --prefix backend",
     "test": "npm test --prefix backend",
-    "build": "npm --prefix frontend install && npm --prefix frontend run build"
+    "build": "npm --prefix frontend install --include=dev && npm --prefix frontend run build"
   }
 }
