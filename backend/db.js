@@ -1,7 +1,7 @@
 const mysql = require('mysql2/promise');
 const config = require('./config');
 
-const pool = mysql.createPool({
+const poolConfig = {
   host: config.db.host,
   port: config.db.port,
   user: config.db.user,
@@ -11,7 +11,13 @@ const pool = mysql.createPool({
   connectionLimit: 10,
   namedPlaceholders: false,
   timezone: 'Z',
-});
+};
+
+if (config.db.ssl) {
+  poolConfig.ssl = config.db.ssl;
+}
+
+const pool = mysql.createPool(poolConfig);
 
 async function query(sql, params = []) {
   const [rows] = await pool.execute(sql, params);

@@ -1,4 +1,4 @@
--- Required JOIN: all open tickets with customer name and email
+-- Required JOIN: all open tickets with customer names and emails
 -- Use this after schema and seed have been applied.
 
 USE support_tickets;

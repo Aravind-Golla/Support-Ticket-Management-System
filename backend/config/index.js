@@ -24,6 +24,7 @@ const config = {
     user: required('DB_USER', 'root'),
     password: required('DB_PASSWORD', ''),
     database: required('DB_NAME', 'support_tickets'),
+    ssl: (process.env.DB_SSL === 'true' || process.env.DB_SSL === '1') ? { rejectUnauthorized: false } : undefined,
   },
 };
 
